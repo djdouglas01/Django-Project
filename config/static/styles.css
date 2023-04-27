@@ -46,3 +46,7 @@ a:active {
     background-color: white;
     border: none;
 }
+
+#detail {
+    height: 200px;
+}

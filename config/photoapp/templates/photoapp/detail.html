@@ -13,10 +13,10 @@
   {% endif %}
 </div>
 <div class="row pb-5">
-  <div class="col-md-8">
-    <img src="{{photo.image.url}}" alt="" width="100%" />
+  <div class="col-md-7">
+    <img src="{{photo.image.url}}" alt="" width="600px" height="600px" />
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4" style="border: 1px solid black;">
     <h4>More about this photo:</h4>
     <ul class="list-group list-group-horizontal-lg list-unstyled py-4">
       {% for tag in photo.tags.all %}
