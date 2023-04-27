@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<nav class="navbar navbar-expand-md navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="{% url 'photo:list' %}">Photo App</a>
+      <a class="navbar-brand" href="{% url 'photo:list' %}">Home</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -22,9 +22,14 @@
           <li class="nav-item">
             <a class="nav-link active" href="{% url 'photo:create' %}">Add a photo</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Hi {{user.username}}</a>
-          </li>
+          
+          <div class="dropdown">
+            <a id="dropdown" class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              Hi {{user.username}}
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink navbar-light bg-light">
+            <li><a class="dropdown-item" href="{% url 'user:login' %}">Log Out</a></li>
+          </ul>
           {% else %}
   
           <li class="nav-item">
@@ -32,6 +37,8 @@
               >Sign In</a
             >
           </li>
+
+          
           {% endif %}
         </ul>
       </div>

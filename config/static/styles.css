@@ -1,9 +1,48 @@
 h1 {
-  color:lightskyblue;  
+  color:white;  
   text-align: center;
 }
 
 #photos {
-    width:350px;
+    width:400px;
     height:300px;
   }
+
+footer {
+    text-align: center;
+    width: 100%;
+    color: white;
+}
+
+.body {
+    background-color: darkgrey;
+}
+
+a:link { 
+    text-decoration: none; 
+    color: black;
+}
+
+
+a:visited { 
+    text-decoration: none; 
+    color: black;
+}
+
+
+a:hover { 
+    text-decoration: none; 
+    color: black;
+}
+
+
+a:active { 
+    text-decoration: none; 
+    color: black;
+}
+
+#dropdown{
+    color: black;
+    background-color: white;
+    border: none;
+}
