@@ -12,7 +12,10 @@ from django.urls import reverse_lazy
 
 from .models import Photo
 
+
 # Create your views here.
+
+
 
 class PhotoListView(ListView):
     
