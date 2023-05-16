@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="/static/styles.css">
+
 <nav class="navbar navbar-expand-md navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="{% url 'photo:list' %}">Home</a>
@@ -28,7 +30,11 @@
               Hi {{user.username}}
             </a>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink navbar-light bg-light">
-            <li><a class="dropdown-item" href="{% url 'photo:list' %}">Log Out</a></li>
+            <form id="logout-form" method="post" action="/admin/logout/">
+              <input type="hidden" name="csrfmiddlewaretoken">
+              <button type="submit" style="justify-content:center; text-align:center">Log out</button>
+              {% csrf_token %}
+            </form>
           </ul>
           {% else %}
   

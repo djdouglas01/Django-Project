@@ -50,3 +50,7 @@ a:active {
 #detail {
     height: 200px;
 }
+
+#logout {
+    background-color: black;
+}
