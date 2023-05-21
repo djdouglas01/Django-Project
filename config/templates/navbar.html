@@ -1,52 +1,45 @@
 <link rel="stylesheet" href="/static/styles.css">
 
 <nav class="navbar navbar-expand-md navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="{% url 'photo:list' %}">Home</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarTogglerDemo02"
-        aria-controls="navbarTogglerDemo02"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div
-        class="collapse navbar-collapse flex-row-reverse"
-        id="navbarTogglerDemo02"
-      >
-        <ul class="navbar-nav">
-          {% if user.is_authenticated %}
-         
-          <li class="nav-item">
-            <a class="nav-link active" href="{% url 'photo:create' %}">Add a photo</a>
-          </li>
-          
-          <div class="dropdown">
-            <a id="dropdown" class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-              Hi {{user.username}}
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink navbar-light bg-light">
-            <form id="logout-form" method="post" action="/admin/logout/">
-              <input type="hidden" name="csrfmiddlewaretoken">
-              <button type="submit" style="justify-content:center; text-align:center">Log out</button>
-              {% csrf_token %}
-            </form>
-          </ul>
-          {% else %}
-  
-          <li class="nav-item">
-            <a href="{% url 'user:login' %}" class="btn btn-sm btn-danger"
-              >Sign In</a
-            >
-          </li>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'photo:list' %}">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse flex-row-reverse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav">
 
-          
-          {% endif %}
-        </ul>
-      </div>
+        
+        {% if user.is_authenticated %}
+
+        <nav class="navbar navbar-light bg-light">
+          <span class="navbar-brand mb-0 h1">Hi {{user.username}}</span>
+        </nav>
+
+
+        <form id="button1" action="{% url 'photo:create' %}">
+          <button type="submit">Add a furry friend</button>
+       </form>
+
+        <form id="logout-form" method="post" action="/admin/logout/">
+          <input type="hidden" name="csrfmiddlewaretoken">
+          <button type="submit" id="button">Log out</button>
+          {% csrf_token %}
+        </form>
+
+
+
+      </ul>
+      {% else %}
+
+      <li class="nav-item">
+        <a href="{% url 'user:login' %}" class="btn btn-sm btn-danger">Sign In</a>
+      </li>
+
+
+      {% endif %}
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>

@@ -1,13 +1,13 @@
 {% extends 'base.html' %} 
 
 {% block body %}
-<h1 class="header">Devin's Dog Adoption Agency</h1>
+<h1 class="header">BREEDER'S CLUB</h1>
 <div class="row">
   {% for photo in photos %}
   <div class="col-lg-3 col-md-4 col-xs-6">
     <a href="{% url 'photo:detail' photo.id %}" class="d-block mb-4 h-100">
       <img src="{{photo.image.url}}" id="photos" class="img-fluid rounded" alt="{{photo.title}}" />
-      <h6 class="text-center" style="text-decoration: none">{{ photo.title }}</h6>
+      <h6 class="text-center" style="text-decoration: none; font-family: Bowlby One SC;">{{ photo.title }}</h6>
     </a>
   </div>
   {% endfor %}

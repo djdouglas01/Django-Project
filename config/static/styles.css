@@ -1,12 +1,56 @@
 h1 {
-  color:white;  
-  text-align: center;
+    color: white;
+    text-align: center;
+    font-family: "Bowlby One SC";
+    font-size: 50px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 22px;
+    padding-bottom: 25px;
 }
 
+.navbar-light .navbar-brand  {
+    display: contents;
+    font-size: 14pt;
+    color: black;
+    font-weight: 400;
+    text-align: center;
+    justify-content: center;
+    font-family: "Bowlby One SC";
+    font-style: normal;
+    font-variant: normal;
+
+}
+
+button {
+    text-align: center;
+    margin-top: 7px;
+    border: none;
+    background-color: transparent;
+    font-family: "Bowlby One SC";
+
+
+}
+#logout-form {
+    border-bottom: 0.5px solid black;
+    margin-left: 2px;
+}
+
+#button1 {
+    border-bottom: 0.5px solid black;
+    margin-left: 2px;
+}
+
+button:hover {
+    color: darkgray;
+}
+
+
 #photos {
-    width:400px;
-    height:300px;
-  }
+    width: 400px;
+    height: 300px;
+}
 
 footer {
     text-align: center;
@@ -18,30 +62,30 @@ footer {
     background-color: darkgrey;
 }
 
-a:link { 
-    text-decoration: none; 
+a:link {
+    text-decoration: none;
     color: black;
 }
 
 
-a:visited { 
-    text-decoration: none; 
+a:visited {
+    text-decoration: none;
     color: black;
 }
 
 
-a:hover { 
-    text-decoration: none; 
+a:hover {
+    text-decoration: none;
     color: black;
 }
 
 
-a:active { 
-    text-decoration: none; 
+a:active {
+    text-decoration: none;
     color: black;
 }
 
-#dropdown{
+#dropdown {
     color: black;
     background-color: white;
     border: none;
@@ -51,6 +95,4 @@ a:active {
     height: 200px;
 }
 
-#logout {
-    background-color: black;
-}
+
