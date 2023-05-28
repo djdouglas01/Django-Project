@@ -82,7 +82,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "config.wsgi.application"
 
-if os.getenv("RAILS_ENV") == "production":
+if os.environ["RAILS_ENV"] == "production":
     # Database
     # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
     DATABASES = {
