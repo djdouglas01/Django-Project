@@ -168,5 +168,10 @@ STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    "django-project-production-a44f.up.railway.app",
+]
+
+
 
 
