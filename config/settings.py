@@ -170,10 +170,11 @@ STATICFILES_DIRS = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://django-project-production-a44f.up.railway.app",
     "https://django-project-production-a44f.up.railway.app",
-    "https://django-project-production-a44f.up.railway.app/users/login/"
-    "http://django-project-production-a44f.up.railway.app/users/login/"
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://django-project-production-a44f.up.railway.app",
 ]
 
 
